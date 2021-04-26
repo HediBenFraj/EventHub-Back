@@ -33,6 +33,9 @@ const authRouter = require('./routes/auth')
 app.use('/api/users',usersRouter)               //and our users route
 app.use('/api/auth',authRouter)
 
+app.use('/evenement',evenementRouter)     
+app.use('/lieu',lieuRouter)   
+
 app.listen(port, () => {            //specifiying at which port the app listens 
     console.log("server is running on port :",port)
 })
