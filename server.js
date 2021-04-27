@@ -29,12 +29,14 @@ try{
 
 const usersRouter = require('./routes/users')           //defining the users route which is /users
 const authRouter = require('./routes/auth')
+const evenementRouter = require('./routes/evenement')
+const lieuRouter = require('./routes/lieu')
 
 app.use('/api/users',usersRouter)               //and our users route
 app.use('/api/auth',authRouter)
 
-app.use('/evenement',evenementRouter)     
-app.use('/lieu',lieuRouter)   
+app.use('/api/evenement',evenementRouter)     
+app.use('/api/lieu',lieuRouter)   
 
 app.listen(port, () => {            //specifiying at which port the app listens 
     console.log("server is running on port :",port)

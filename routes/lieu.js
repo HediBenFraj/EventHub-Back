@@ -1,5 +1,5 @@
 const router = require('express').Router() 
-let Lieu = require('../models/lieu.model') 
+const Lieu = require('../models/lieu.model') 
 
 
 router.route('/').get((req,res) => {     
@@ -15,7 +15,7 @@ router.route('/add').post((req,res)=> {
     const telephone = req.body.telephone
     const email = req.body.email
     const prix = parseFloat(req.body.prix)
-    const newLieu = new User({nom,
+    const newLieu = new Lieu({nom,
                               type,
                               adresse,
                               telephone,
