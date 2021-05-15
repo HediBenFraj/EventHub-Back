@@ -29,10 +29,13 @@ try:
             print(title.text)
             note = article.find_element_by_class_name("review_count")
             print(note.text)
+            address = article.find_element_by_class_name("address-text")
+            print(address.text)
 
             data.append({
                 "title": title.text,
                 "note": note.text,
+                "address": address.text
 
             })
 
