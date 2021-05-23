@@ -1,27 +1,44 @@
 const mongoose = require('mongoose') ; 
 var schema = new mongoose.Schema({
-    nom: {
+    name: {
         type : String ,
-        required : true 
+         
     },
 	type: {
         type: String,
-        required : true 
+         
     },
-	adresse:{
+	address:{
         type:String,
-        required : true 
+         
     },
-	telephone:{
+	phoneNumber:{
         type:String, 
-        required : true 
+        
     },
-	email:{
+	mail:{
         type:String,
-        required : true 
+        
 
     },
-	prix: Number  
+	prix:{
+        type: String
+    },
+    websiteUrl:{
+        type:String
+    },
+    menuUrl:{
+        type:String
+    },
+    avisNumber:{
+        type:String
+    },
+    avisNote:{
+        type:String
+    },
+    cuisines :{
+        type:String
+    } 
 
 })
 

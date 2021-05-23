@@ -2,7 +2,8 @@ const router = require('express').Router()
 let Lieu = require('../models/lieu.model') 
 
 
-router.route('/').get((req,res) => {     
+router.route('/').get((req,res) => {   
+    console.log('lieu')  
     Lieu.find()                         
         .then(lieu => res.json(lieu))    
         .catch( err => res.status(400).json('Error' + err)) 
@@ -25,6 +26,35 @@ router.route('/add').post((req,res)=> {
     newLieu.save()                              
         .then(()=> res.json('lieu added'))
         .catch(err => res.status(400).json('Error'+err))
+})
+
+router.route('/hotels/add').post((req,res)=>{
+
+
+    let added = 0
+    let lieu
+    req.body.forEach(element =>{
+        lieu = new Lieu({
+            name:element.title,
+            address:element.address,
+            avisNote:element.note,
+            type:"HOTELS"
+        })
+
+        console.log(lieu)
+        lieu.save()
+            .then(res=> {
+                added = added +1
+            })
+
+    })
+    res.status(200).json(`${added} Lieux de type HOTEL added`)
+
+})
+
+router.route('/hotels/number').get((req,res)=>{
+    Lieu.find()
+        .then(lieus => res.json(lieus.length))
 })
 
 router.route('/:id').get((req,res)=> {              
