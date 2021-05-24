@@ -38,7 +38,10 @@ var schema = new mongoose.Schema({
     },
     cuisines :{
         type:String
-    } 
+    } ,
+    img1:{
+        type:String
+    }
 
 })
 

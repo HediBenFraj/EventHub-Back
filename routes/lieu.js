@@ -3,9 +3,14 @@ let Lieu = require('../models/lieu.model')
 
 
 router.route('/').get((req,res) => {   
-    console.log('lieu')  
+    const params = req.query
+    console.log(params)
     Lieu.find()                         
-        .then(lieu => res.json(lieu))    
+        .then(lieu => {
+            const lieus =lieu
+            const filteredLieus = lieus.filter(element => element.address.toUpperCase().includes(params.address.toUpperCase()) )
+            
+            res.json(filteredLieus)})    
         .catch( err => res.status(400).json('Error' + err)) 
 })
 
@@ -37,7 +42,9 @@ router.route('/hotels/add').post((req,res)=>{
         lieu = new Lieu({
             name:element.title,
             address:element.address,
-            avisNote:element.note,
+            avisNumber:element.note,
+            prix:element.prix,
+            img1:element.img1,
             type:"HOTELS"
         })
 
@@ -85,5 +92,12 @@ router.route('/update/:id').post((req,res)=> {
         })
         .catch(err => res.status(400).json('Error : ' +err))
 })
+
+router.route('/get/').get((req,res) => {   
+    Lieu.find()                         
+        .then(lieu => res.json(lieu))    
+        .catch( err => res.status(400).json('Error' + err)) 
+})
+
 
 module.exports = router    
