@@ -1,3 +1,4 @@
+from typing import get_args
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -18,8 +19,8 @@ def formatting_function(chaine):
 
 
 
-driver = webdriver.Chrome('./chromedriver')  # Optional argument, if not specified will search path.
-driver.get('https://www.tripadvisor.fr/Restaurants-g295401-Sousse_Sousse_Governorate.html')
+driver = webdriver.Chrome('C:\Program Files (x86)\chromedriver.exe')  # Optional argument, if not specified will search path.
+driver.get('https://www.tripadvisor.fr/Restaurant_Review-g295401-d9740033-Reviews-Hard_Rock_Cafe-Sousse_Sousse_Governorate.html#photos;aggregationId=&albumid=101&filter=7')
 print(driver.title)
 
 
@@ -47,6 +48,7 @@ try:
                 EC.presence_of_element_located((By.CLASS_NAME,"page"))
             )
 
+            images = page.find_elements(By.TAG_NAME, 'img')
             avis_phone = page.find_elements(By.XPATH ,'//*[contains(concat( " ", @class, " " ), concat( " ", "_37QDe3gr", " " ))]' )
             price_cuisines = page.find_elements(By.XPATH ,'//*[contains(concat( " ", @class, " " ), concat( " ", "_1XLfiSsv", " " ))]' )
             addresses = page.find_elements(By.XPATH ,'//*[contains(concat( " ", @class, " " ), concat( " ", "_15QfMZ2L", " " ))]' )
@@ -57,6 +59,9 @@ try:
             restaurantTitle = page.find_element(By.XPATH , '//*[contains(concat( " ", @class, " " ), concat( " ", "_3a1XQ88S", " " ))]')
             restaurantAvisNumber = avis_phone[0]
             restaurantAddress = addresses[1]
+            
+            print("longeur d'image", images[0].text)
+
             try:
                 restaurantPhoneNumber =  avis_phone[1]
             except:

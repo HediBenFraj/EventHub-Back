@@ -8,18 +8,11 @@ router.route('/').get((req,res) => {
 })
 
 router.route('/add').post((req,res)=> {
-    const nom = req.body.nom
-    const type = req.body.type
-    const NombreAttendu = Number(req.body.NombreAttendu)
-    const date = Date.parse(req.body.date)
-
-    const newEvenement = new Evenement({nom,
-                                        type,
-                                        NombreAttendu,
-                                        date})
+    console.log(req.body)
+    const newEvenement = new Evenement(req.body)
 
     newEvenement.save()
-        .then(()=> res.json('Exercice added'))
+        .then(()=> res.status(200).json('Event added'))
         .catch(err => res.status(400).json('Error'+err))
 })
 

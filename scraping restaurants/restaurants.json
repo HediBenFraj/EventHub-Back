@@ -7,7 +7,7 @@
     "phoneNumber": "+216 73 347 300",
     "websiteUrl": "https://www.hardrockcafe.com/location/port-el-kantaoui/#utm_source=rest_of_network&utm_medium=Yext&utm_campaign=Listings",
     "menuUrl": "https://www.hardrockcafe.com/location/port-el-kantaoui/files/5471/HRCPEK_-_LIMITED_MENU_Fr_&_En_V5.pdf",
-    "prix": "6 TND - 75 TND",
+    "prix": "2 TND - 75 TND",
     "cuisines": "Americaine, Bar, Europeenne",
     "mail": "mailto:pek.info@hrctunisia.com?subject=?"
   },
@@ -47,30 +47,8 @@
     "cuisines": "Italienne, Francaise, Fruits de mer & Poisson, Mediterraneenne, Tunisienne",
     "mail": "mailto:karim.fekih@tunet.tn?subject=?"
   },
-  {
-    "name": "Mio Mondo",
-    "avisNumber": "297 avis",
-    "rating": "4,0 ",
-    "address": "14 Route Touristique, Sousse 4000 Tunisie",
-    "phoneNumber": "+216 73 273 243",
-    "websiteUrl": "http://www.facebook.com/miomondo.coffeeandmore?ref=hl",
-    "menuUrl": "http://www.facebook.com/miomondo.coffeeandmore?ref=hl",
-    "prix": "Cafe, Europeenne",
-    "cuisines": "Vegetariens bienvenus, Choix vegetaliens, Halal",
-    "mail": "NONE"
-  },
-  {
-    "name": "Restaurant Cafe Seles",
-    "avisNumber": "224 avis",
-    "rating": "4,5 ",
-    "address": "Bab El Gharbi, Medina, Sousse Between the Archeological Museum and the Dar Essid Museum, Sousse 4000 Tunisie",
-    "phoneNumber": "+216 98 562 847",
-    "websiteUrl": "http://cafeseles.weebly.com/",
-    "menuUrl": "https://cafeseles.weebly.com/menu.html",
-    "prix": "Mediterraneenne, Moyen-Orient, Tunisienne, Africaine",
-    "cuisines": "Halal, Vegetariens bienvenus, Choix vegetaliens",
-    "mail": "mailto:restaurantcafeseles@gmail.com?subject=?"
-  },
+  
+ 
   {
     "name": "La Villa",
     "avisNumber": "120 avis",
@@ -131,174 +109,8 @@
     "cuisines": "Mediterraneenne, Europeenne",
     "mail": "NONE"
   },
-  {
-    "name": "Beb Al Medina Cafe",
-    "avisNumber": "71 avis",
-    "rating": "4,0 ",
-    "address": "Soula Center, Place Sidi Yahia, Sousse Inside the Soula Center, Sousse 4000 Tunisie",
-    "phoneNumber": "+216 29 594 200",
-    "websiteUrl": "http://www.facebook.com/BEBAlMedina",
-    "menuUrl": "http://www.facebook.com/BEBAlMedina",
-    "prix": "Cafe, Tunisienne",
-    "cuisines": "Vegetariens bienvenus",
-    "mail": "NONE"
-  },
-  {
-    "name": "Caruso Cafe Bar",
-    "avisNumber": "160 avis",
-    "rating": "4,0 ",
-    "address": "Avenue Hedi Chaker, Sousse 4000 Tunisie",
-    "phoneNumber": "+216 73 203 052",
-    "websiteUrl": "https://www.facebook.com/Restaurant.Bar.Caruso/",
-    "menuUrl": "https://www.facebook.com/Restaurant.Bar.Caruso/",
-    "prix": "Italienne, Mediterraneenne, Europeenne",
-    "cuisines": "Vegetariens bienvenus",
-    "mail": "NONE"
-  },
-  {
-    "name": "Ristorante Una Storia",
-    "avisNumber": "103 avis",
-    "rating": "4,0 ",
-    "address": "Boulevard du 14 janvier Sousse-TUNISIE, Sousse 4000 Tunisie",
-    "phoneNumber": "+216 73 221 499",
-    "websiteUrl": "NONE",
-    "menuUrl": "NONE",
-    "prix": "Europeenne, Italienne, Mediterraneenne, Tunisienne",
-    "cuisines": "Dejeuner, D\u00eener, Ouvert tard",
-    "mail": "NONE"
-  },
-  {
-    "name": "Lido Restaurant",
-    "avisNumber": "83 avis",
-    "rating": "4,0 ",
-    "address": "Embarcadero, Sousse 4000 Tunisie",
-    "phoneNumber": "+216 73 221 499",
-    "websiteUrl": "NONE",
-    "menuUrl": "https://www.tripadvisor.fr/Restaurant_Review-g295401-d3295682-Reviews-Lido_Restaurant-Sousse_Sousse_Governorate.html#MAPVIEW",
-    "prix": "Tunisienne, Fruits de mer & Poisson, Mediterraneenne",
-    "cuisines": "Vegetariens bienvenus",
-    "mail": "NONE"
-  },
-  {
-    "name": "Bonaparte",
-    "avisNumber": "84 avis",
-    "rating": "4,5 ",
-    "address": "Av. Taieb Mhiri, Sousse 4000 Tunisie",
-    "phoneNumber": "+216 73 221 499",
-    "websiteUrl": "NONE",
-    "menuUrl": "https://www.tripadvisor.fr/Restaurant_Review-g295401-d2662198-Reviews-Bonaparte-Sousse_Sousse_Governorate.html#MAPVIEW",
-    "prix": "Mediterraneenne, Europeenne",
-    "cuisines": "D\u00eener, Ouvert tard",
-    "mail": "NONE"
-  },
-  {
-    "name": "La Marmite",
-    "avisNumber": "73 avis",
-    "rating": "4,5 ",
-    "address": "15 Rue Remada 4000, Sousse 4000 Tunisie",
-    "phoneNumber": "+216 27 362 453",
-    "websiteUrl": "NONE",
-    "menuUrl": "NONE",
-    "prix": "Tunisienne, Fruits de mer & Poisson, Mediterraneenne, Europeenne",
-    "cuisines": "Dejeuner, D\u00eener",
-    "mail": "NONE"
-  },
-  {
-    "name": "Planet Food",
-    "avisNumber": "142 avis",
-    "rating": "4,0 ",
-    "address": "49 Route de La Corniche, Sousse 4000 Tunisie",
-    "phoneNumber": "+216 27 362 453",
-    "websiteUrl": "http://www.planetfoodcornichesousse.com/menu-enfants-",
-    "menuUrl": "http://www.planetfoodcornichesousse.com/menu-enfants-",
-    "prix": "Italienne, Mediterraneenne, Europeenne, Tunisienne",
-    "cuisines": "Dejeuner, D\u00eener",
-    "mail": "NONE"
-  },
-  {
-    "name": "El Kasbah",
-    "avisNumber": "24 avis",
-    "rating": "5,0 ",
-    "address": "Rue Souk El Kaid, Sousse 4000 Tunisie",
-    "phoneNumber": "+216 27 362 453",
-    "websiteUrl": "NONE",
-    "menuUrl": "https://www.tripadvisor.fr/Restaurant_Review-g295401-d8440601-Reviews-El_Kasbah-Sousse_Sousse_Governorate.html#MAPVIEW",
-    "prix": "Cafe",
-    "cuisines": "Dejeuner, Petit dejeuner",
-    "mail": "NONE"
-  },
-  {
-    "name": "Le Surfing",
-    "avisNumber": "58 avis",
-    "rating": "4,0 ",
-    "address": "Av. Taieb M'hir, 4000 Sousse, Sousse 4000 Tunisie",
-    "phoneNumber": "+216 27 362 453",
-    "websiteUrl": "NONE",
-    "menuUrl": "https://www.tripadvisor.fr/Restaurant_Review-g295401-d3543686-Reviews-Le_Surfing-Sousse_Sousse_Governorate.html#MAPVIEW",
-    "prix": "Fruits de mer & Poisson, Tunisienne",
-    "cuisines": "Dejeuner, D\u00eener",
-    "mail": "NONE"
-  },
-  {
-    "name": "La Caleche",
-    "avisNumber": "31 avis",
-    "rating": "4,5 ",
-    "address": "6 Rue de Remada, Sousse 4000 Tunisie",
-    "phoneNumber": "+216 73 226 489",
-    "websiteUrl": "NONE",
-    "menuUrl": "NONE",
-    "prix": "Mediterraneenne, Tunisienne, Internationale",
-    "cuisines": "Dejeuner, D\u00eener",
-    "mail": "NONE"
-  },
-  {
-    "name": "Eddar Darek Restuarant",
-    "avisNumber": "27 avis",
-    "rating": "4,5 ",
-    "address": "Avenue Les Oranges, Khezema Est, Sousse, Sousse 4000 Tunisie",
-    "phoneNumber": "+216 73 271 299",
-    "websiteUrl": "NONE",
-    "menuUrl": "NONE",
-    "prix": "Mediterraneenne, Tunisienne",
-    "cuisines": "Vegetariens bienvenus",
-    "mail": "NONE"
-  },
-  {
-    "name": "Mare-Mar (ouahchi)",
-    "avisNumber": "40 avis",
-    "rating": "4,5 ",
-    "address": "Rue des Palmiers Khezama, Sousse 4051 Tunisie",
-    "phoneNumber": "+216 73 244 250",
-    "websiteUrl": "http://www.facebook.com/Mare.mar.ouahchi/",
-    "menuUrl": "https://www.facebook.com/Mare.mar.ouahchi/photos/a.729539843774815/2379219868806796/?type=3&theater",
-    "prix": "Tunisienne, Pizza, Mediterraneenne, Soupes",
-    "cuisines": "Vegetariens bienvenus, Choix vegetaliens, Halal",
-    "mail": "NONE"
-  },
-  {
-    "name": "Sendai",
-    "avisNumber": "126 avis",
-    "rating": "4,0 ",
-    "address": "Movenpick Resort & Marine Spa Sousse Boulevard du 14 Janvier, Sousse 4000 Tunisie",
-    "phoneNumber": "+216 73 202 000",
-    "websiteUrl": "http://www.moevenpick-hotels.com/en/pub/hotels_resorts/worldmap/sousse/restaurants_entertainment.cfm",
-    "menuUrl": "http://www.moevenpick-hotels.com/en/pub/hotels_resorts/worldmap/sousse/restaurants_entertainment.cfm",
-    "prix": "Japonaise, Sushi, Asiatique",
-    "cuisines": "Dejeuner, D\u00eener, Ouvert tard",
-    "mail": "mailto:resort.sousse%20@moevenpick.com?subject=?"
-  },
-  {
-    "name": "Big Ben",
-    "avisNumber": "61 avis",
-    "rating": "4,0 ",
-    "address": "Route Touristique Avenue 14 Janvier, Sousse 4000 Tunisie",
-    "phoneNumber": "+216 51 555 515",
-    "websiteUrl": "https://www.facebook.com/BigBenRestoCafe/",
-    "menuUrl": "https://www.facebook.com/BigBenRestoCafe/",
-    "prix": "Brasserie gastronomique",
-    "cuisines": "Petit dejeuner, Dejeuner, D\u00eener, Brunch",
-    "mail": "NONE"
-  },
+ 
+ 
   {
     "name": "Zitouna",
     "avisNumber": "17 avis",

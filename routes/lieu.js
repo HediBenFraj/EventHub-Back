@@ -2,11 +2,24 @@ const router = require('express').Router()
 const Lieu = require('../models/lieu.model') 
 
 
-router.route('/').get((req,res) => {     
+router.route('/').get((req,res) => {   
+    const params = req.query
+
     Lieu.find()                         
-        .then(lieu => res.json(lieu))    
+        .then(lieu => {
+            const data=lieu
+            let filteredData
+            if(params.mode === "getall"){
+                 filteredData = lieu.filter(element => element.type.includes(params.type) || element.type.includes('DECORATION'))
+            }else{
+                 filteredData = lieu.filter(element => element.type.includes(params.type))
+
+            }
+            res.json(filteredData)})    
         .catch( err => res.status(400).json('Error' + err)) 
 })
+
+
 
 router.route('/add').post((req,res)=> {           
     const nom = req.body.nom
@@ -81,7 +94,78 @@ router.route('/restaurants/add').post((req,res)=>{
 
 router.route('/restaurants/number').get((req,res)=>{
     Lieu.find()
-        .then(lieus => res.json(lieus.length))
+        .then(lieus => {
+            const data=lieus
+            const filteredData = lieus.filter(element => element.type === 'RESTAURANT')
+            res.json(filteredData.length)})
 })
+
+router.route('/decorations/add').post((req,res)=>{
+
+
+    let added = 0
+    let lieu
+    req.body.forEach(element =>{
+        console.log("elements",element)
+        lieu = new Lieu({
+            ...element,
+            type:"DECORATION"
+        })
+
+        console.log(lieu)
+        lieu.save()
+            .then(res=> {
+                added = added +1
+            })
+
+    })
+    res.status(200).json(`${added} Lieux de type DECORATION added`)
+
+})
+
+
+router.route('/decorations/number').get((req,res)=>{
+    Lieu.find()
+        .then(lieus => {
+            const data=lieus
+            const filteredData = lieus.filter(element => element.type === 'DECORATION')
+            res.json(filteredData.length)})
+})
+
+
+router.route('/hotels/add').post((req,res)=>{
+
+
+    let added = 0
+    let lieu
+    req.body.forEach(element =>{
+        console.log("elements",element)
+        lieu = new Lieu({
+            ...element,
+            type:"HOTEL"
+        })
+
+        console.log(lieu)
+        lieu.save()
+            .then(res=> {
+                added = added +1
+            })
+
+    })
+    res.status(200).json(`${added} Lieux de type HOTEL added`)
+
+})
+
+
+router.route('/hotels/number').get((req,res)=>{
+    Lieu.find()
+        .then(lieus => {
+            const data=lieus
+            const filteredData = lieus.filter(element => element.type === 'HOTEL')
+            res.json(filteredData.length)})
+})
+
+
+
 
 module.exports = router    

@@ -2,23 +2,18 @@ const mongoose = require('mongoose') ;
 var schema = new mongoose.Schema({
     name: {
         type : String ,
-        required : true 
     },
 	type: {
         type: String,
-        required : true 
     },
 	address:{
         type:String,
-        required : true 
     },
 	phoneNumber:{
         type:String, 
-        required : true 
     },
 	mail:{
         type:String,
-        required : true 
 
     },
 	prix:{
@@ -38,7 +33,16 @@ var schema = new mongoose.Schema({
     },
     cuisines :{
         type:String
-    } 
+    },
+    img1 :{
+        type:String
+    },
+    img2 :{
+        type:String
+    },
+    img3 :{
+        type:String
+    },
 
 })
 
