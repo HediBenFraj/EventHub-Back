@@ -55,5 +55,34 @@ router.route('/update/:id').post((req,res)=> {
         })
         .catch(err => res.status(400).json('Error : ' +err))
 })
+router.route('/decorations/add').post((req,res)=>{
+
+
+    let added = 0
+    let lieu
+    req.body.forEach(element =>{
+        lieu = new Lieu({
+            name:element.name,
+            rating:element.rating,
+            loc:element.loc,
+            phone:element.phone,
+            type:"decorations"
+        })
+
+        console.log(lieu)
+        lieu.save()
+            .then(res=> {
+                added = added +1
+            })
+
+    })
+    res.status(200).json(`${added} Lieux de type HOTEL added`)
+
+})
+
+router.route('/decorations/number').get((req,res)=>{
+    Lieu.find()
+        .then(lieus => res.json(lieus.length))
+})
 
 module.exports = router    
