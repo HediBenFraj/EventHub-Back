@@ -26,6 +26,9 @@ const userSchema = new Schema({         // userschema is a new shecma with the p
         type: Number,
         required : true,
     },
+    interests : {
+        type : Array
+    },
     isAdmin : Boolean
 },{
     timestamps: true                    //timestamps : true adds unique elements, maybe even the id 

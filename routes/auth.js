@@ -16,7 +16,9 @@ router.route('/').post(async(req,res) => {     // This is a get request that all
 
     const token = jwt.sign({ _id : user._id,isAdmin : user.isAdmin},config.get('jwtPrivateKey'))
 
-    res.send(token)
+    res.send({
+        user,
+        token})
 })
 
 // router.route('/add').post(async(req,res)=>  {          // same thing as the other request we're just mentionin  the route 'add'

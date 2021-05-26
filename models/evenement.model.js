@@ -12,7 +12,8 @@ const evenementSchema = new Schema({
     startDate : {type:String, required: true},
     endDate : {type:String, required: true},
     numberOfAttendees : {type:String, required: true},
-    reservations : {type: Array}
+    reservations : {type: Array},
+    tags : {type:Array}
 },{
     timestamps: true
 })

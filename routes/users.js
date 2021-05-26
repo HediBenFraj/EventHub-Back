@@ -42,10 +42,11 @@ router.delete('/:id', [auth,admin], (req,res) => {     // we're using the delete
 router.route('/update/:id').post((req,res)=> {    // we specified the update/:id  route and used a post request
     User.findById(req.params.id)            
         .then(user => {
-            user.username = req.body.username       //we're updating the content of the user
+            user.interests = user.interests.concat(req.body.interests)
+            
 
             user.save()                             // then commiting changes with user.save()
-                .then(()=> res.json('User Updated'))
+                .then(()=> res.json(user))
                 .catch(err => res.status(400).json("Error : "+err))
         })
         .catch(err => res.status(400).json('Error : ' +err))

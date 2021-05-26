@@ -43,4 +43,38 @@ router.route('/update/:id').post((req,res)=> {
     .catch(err => res.status(400).json('Error: '+err ))
 })
 
+
+router.route('/recommended/').post((req,res) => {
+
+    Evenement.find()
+        .then(evenement => {
+            let recommendedEvents = []
+            console.log('got here',req.body.tags)
+            if (req.body.tags.length<1){
+                recommendedEvents = evenement
+                recommendedEvents.reverse()
+            }else{
+                 req.body.tags.forEach(interest => {
+                evenement.forEach(event => {
+                    event.tags.forEach(tag => {
+                        if(tag && interest){
+                            console.log("tag ",tag , " interest ",interest)
+                        if( tag.toUpperCase().includes(interest.toUpperCase())){
+                            
+                            if(!recommendedEvents.find(addedEvent =>{
+                                
+                                if(addedEvent.name === event.name) return true 
+                            })) recommendedEvents.push(event)}
+                        }
+                        
+                    })
+                })
+            })
+            }
+            res.json(recommendedEvents)
+        
+        })
+        .catch( err => res.status(400).json('Error' + err))
+})
+
 module.exports = router

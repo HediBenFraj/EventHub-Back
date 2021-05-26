@@ -43,6 +43,9 @@ var schema = new mongoose.Schema({
     img3 :{
         type:String
     },
+    tags : {
+        type:Array
+    }
 
 })
 
