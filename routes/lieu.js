@@ -1,6 +1,7 @@
 const router = require('express').Router() 
 const Lieu = require('../models/lieu.model') 
-
+const auth = require('../middleware/auth')
+const admin = require('../middleware/admin')
 
 router.route('/').get((req,res) => {   
     const params = req.query
@@ -46,7 +47,7 @@ router.route('/:id').get((req,res)=> {
         .catch(err => res.status(400).json("Error :"+err))
 })
 
-router.route('/:id').delete((req,res) => {   
+router.delete('/:id',[auth,admin],(req,res) => {   
     Lieu.findByIdAndDelete(req.params.id)      
         .then(()=> res.json('lieu deleted'))         
         .catch(err => res.status(400).json("Error : "+err))

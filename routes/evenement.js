@@ -1,5 +1,7 @@
 const router = require('express').Router()
 let Evenement = require('../models/evenement.model')
+const auth =  require('../middleware/auth')
+const admin = require('../middleware/admin')
 
 router.route('/').get((req,res) => {
     Evenement.find()
@@ -7,7 +9,7 @@ router.route('/').get((req,res) => {
         .catch( err => res.status(400).json('Error' + err))
 })
 
-router.route('/add').post((req,res)=> {
+router.post('/add',auth,(req,res)=> {
     console.log(req.body)
     const newEvenement = new Evenement(req.body)
 
@@ -22,7 +24,7 @@ router.route('/:id').get((req,res) => {
         .catch(err => res.status(400).json('Error' + err))
 })
 
-router.route('/:id').delete((req,res) => {
+router.delete('/:id',auth,(req,res) => {
     Evenement.findByIdAndDelete(req.params.id)
         .then(() => res.json('Evenement : '+req.params.id + "deleted"))
         .catch(err => res.status(400).json("Error: " +err))
@@ -44,7 +46,7 @@ router.route('/update/:id').post((req,res)=> {
 })
 
 
-router.route('/recommended/').post((req,res) => {
+router.post('/recommended/',auth,(req,res) => {
 
     Evenement.find()
         .then(evenement => {
